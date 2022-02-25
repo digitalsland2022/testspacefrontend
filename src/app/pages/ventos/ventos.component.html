@@ -1,0 +1,23 @@
+<table>
+    <thead>
+        <tr>
+            <th>Client</th>
+            <th>Date</th>
+            <th>Total</th>
+            <th>View Detail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of allSales">
+            <td>{{item.client}}</td>
+            <td>{{item.date}}</td>
+            <td>{{item.total}}</td>
+            <td>
+                <a (click)="isOpen=!isOpen" class="text-primary text-decoration-underline" data-bs-toggle="modal" data-bs-target="#viewDetail">View Detail</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="modal" id="viewDetail" tabindex="-1" role="dialog" aria-labelledby="viewDetailLabel" aria-hidden="true">
+    <app-ventos-detail [allSales]="allSales" [isOpen]="isOpen" (closeDialog)="closeDialog()"></app-ventos-detail>
+</div>

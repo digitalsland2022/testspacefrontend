@@ -1,0 +1,19 @@
+main{
+    margin-inline:auto;
+}
+section{
+    background-color: #ccc;
+}
+h3, section{
+    padding-block: 2rem;
+    text-align: center;
+}
+
+button{    
+    background-color: rgb(5, 54, 83);
+    border-radius: 0.25rem;
+    border: none;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    cursor: pointer;
+}

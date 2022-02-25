@@ -1,0 +1,28 @@
+tbody>tr:nth-child(odd){
+    background-color: #ccc;
+}
+
+table {
+    margin-inline: auto;
+    border: 2px solid;
+    border-collapse: collapse;
+    width: 70%;
+    text-align: center;
+}
+th, td{
+    border-right: 2px solid;
+    border-spacing: unset !important;
+    padding-block: .5rem;
+}
+th:last-child, td:last-child{
+    border-right: none !important;
+}
+table a{
+    color: rgb(3, 77, 216);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.modal-dialog{
+    pointer-events: unset !important;
+}

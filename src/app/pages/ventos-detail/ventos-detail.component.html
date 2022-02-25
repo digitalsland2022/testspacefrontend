@@ -1,0 +1,54 @@
+<div class="modal-dialog bg-white border border-dark">
+    <span class="position-absolute page-title">
+        Client Detail Page
+    </span>
+    <div class="modal-body">
+        <h3>Client Detail</h3>
+        <div class="row py-4">
+            <div class="col-4">
+                <label for="name">Name </label>
+                <input id="name" type="text" class="form-control">
+            </div>
+            <div class="col-4">
+                <label for="add">Address</label>
+                <input id="add" type="text" class="form-control">
+            </div>
+            <div class="col-4">
+                <label for="id">ID</label>
+                <input id="id" type="text" class="form-control">
+            </div>
+            <div class="col-4">
+                <label for="mob">Telephone</label>
+                <input id="mob" type="text" class="form-control">
+            </div>
+            <div class="col-4">
+                <label for="email">Email</label>
+                <input id="email" type="text" class="form-control">
+            </div>
+        </div>
+        <table class="py-3" *ngIf="allSales.length>0">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>SubTotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of allSales|slice:0:2">
+                    <td>{{item.client}}</td>
+                    <td>{{item.date}}</td>
+                    <td>{{item.total}}</td>
+                    <td>{{item.total}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <span>Fecha</span>
+            <input class="mx-3" type="text" class="form-control">
+            <span>Total: S/ 65.50</span>
+        </p>
+        <button class="btn btn-secondary" (click)="backToVentos()">Back</button>
+    </div>
+</div>
