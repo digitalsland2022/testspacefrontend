@@ -8,6 +8,7 @@ import { Component, ElementRef, OnInit, ViewEncapsulation } from '@angular/core'
 })
 export class VentosComponent implements OnInit {
   isOpen:boolean = false;
+  permArr:Array<any> = [];
   allSales = [
     {client:'ABC', date:'02-12-2021', total:65.50},
     {client:'XYZ', date:'02-02-2021', total:75.50},
@@ -17,11 +18,22 @@ export class VentosComponent implements OnInit {
   constructor(private el:ElementRef) { }
 
   ngOnInit(): void {
+    this.permArr = this.allSales;
   }
   
   closeDialog(){
     let el:HTMLElement = this.el.nativeElement.querySelector('#viewDetail')
     el.style.display = "none";
+  }
+  
+  searchByDate(value:string) {
+    this.allSales = this.allSales.filter((el)=>{
+      return el.date === value;
+    })
+  }
+
+  resetSearch() {
+    this.allSales = this.permArr;
   }
 
 }

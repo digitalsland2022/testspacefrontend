@@ -1,3 +1,8 @@
+<div class="text-end w-75 m-auto py-2">
+    <input type="date" placeholder="select date" #dateValue>
+    <button class="btn btn-secondary mx-2" (click)="searchByDate(dateValue.value)">Search</button> 
+    <button class="btn btn-secondary mx-2" (click)="resetSearch()">Reset Search</button> 
+</div>
 <table>
     <thead>
         <tr>
